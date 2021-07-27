@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <!--<Nullable>enable</Nullable>-->
+        <Authors>Maurice Kelly</Authors>
+        <Company>Pragmatic Applications</Company>
+        <Copyright>2021 Pragmatic Applications</Copyright>
+        <Description>A .NET 6.0 Generic CRUD Interface Library</Description>
+        <PackageReleaseNotes>A .NET 6.0 Generic CRUD Interface Library</PackageReleaseNotes>
+        <Version>0.0.0.1</Version>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageTags>A .NET 6.0 Generic CRUD Interface Library</PackageTags>
+        <RepositoryType>A .NET 6.0 Library</RepositoryType>
+        <RepositoryUrl>https://github.com/pragmatic-applications/Lib_Core</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <SupportedPlatform Include="browser" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+    </ItemGroup>
+
+</Project>
