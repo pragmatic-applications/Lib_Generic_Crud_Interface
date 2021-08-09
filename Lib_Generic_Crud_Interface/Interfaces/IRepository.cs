@@ -1,10 +1,6 @@
 ﻿namespace Interfaces
 {
-    public interface IRepository<T> : IAccessorRepository<T>, IMutatorRepository<T>, ISuccess where T : class
-    {
-    }
-
-    public interface IRepository<T, TID> : IAccessorRepository<T>, IMutatorRepository<T>, ISuccess<T> where T : class where TID : struct
+    public interface IRepository<TEntity, TEntityID> : IAccessorRepository<TEntity, TEntityID>, IMutatorRepository<TEntity> where TEntity : class where TEntityID : struct
     {
     }
 }

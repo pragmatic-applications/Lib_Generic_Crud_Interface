@@ -2,10 +2,12 @@
 
 namespace Interfaces
 {
-    public interface IMutatorRepository<T> where T : class
+    public interface IMutatorRepository<TEntity> where TEntity : class
     {
-        Task AddAsync(T t);
-        void Remove(T t);
-        void Update(T t);
+        Task PostRangeAsync(TEntity entity);
+
+        Task PutRangeAsync(TEntity entity);
+
+        Task DeleteRangeAsync(TEntity entity);
     }
 }

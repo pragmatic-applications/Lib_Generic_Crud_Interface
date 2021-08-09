@@ -6,26 +6,24 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    public interface IAccessorRepository<T> where T : class
+    public interface IAccessorRepository<TEntity, TEntityID> where TEntity : class where TEntityID : struct
     {
-        IQueryable<T> Get();
-        IQueryable<T> GetWhere(Expression<Func<T, bool>> predicate);
+        IQueryable<TEntity> Get();
 
-        Task<ICollection<T>> GetOrderByAsync();
-        Task<ICollection<T>> GetOrderByDescendingAsync();
-        Task<T> FindEntityAsync(int id);
-        Task<T> FirstOrDefaultWhereAsync(Expression<Func<T, bool>> predicate);
-    }
+        IQueryable<TEntity> Get(Expression<Func<TEntity, bool>> predicate);
 
-    public interface IAccessorRepository<T, TID> where T : class where TID : struct
-    {
-        IQueryable<T> Get();
-        IQueryable<T> Get(TID id);
-        IQueryable<T> GetWhere(Expression<Func<T, bool>> predicate);
+        Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate);
 
-        Task<ICollection<T>> GetOrderByAsync();
-        Task<ICollection<T>> GetOrderByDescendingAsync();
-        Task<T> FindEntityAsync(int id);
-        Task<T> FirstOrDefaultWhereAsync(Expression<Func<T, bool>> predicate);
+        Task<IEnumerable<TEntity>> GetAsync();
+
+        Task<ICollection<TEntity>> GetOrderByAsync();
+
+        Task<ICollection<TEntity>> GetOrderByDescendingAsync();
+
+        Task<TEntity> FindAsync(TEntityID id);
+
+        Task<bool> SuccessAsync(TEntityID id);
+
+        Task<bool> SuccessAsync(Expression<Func<TEntity, bool>> predicate);
     }
 }
