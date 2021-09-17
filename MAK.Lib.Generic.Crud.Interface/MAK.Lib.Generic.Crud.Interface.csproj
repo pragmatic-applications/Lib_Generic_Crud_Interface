@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Maurice Antonio Kelly @MAKMaurice</Authors>
+        <Company>Pragmatic Applications</Company>
+        <Copyright>Pragmatic Applications - Maurice Antonio Kelly @MAKMaurice</Copyright>
+        <Description>A .NET6 Generic CRUD Interface Library</Description>
+        <PackageReleaseNotes>A .NET 5.0 Generic CRUD Interface Library</PackageReleaseNotes>
+        <Version>0.0.0.3</Version>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageTags>A .NET6 Generic CRUD Interface Library</PackageTags>
+        <RepositoryType>A .NET6 Library</RepositoryType>
+        <RepositoryUrl>https://github.com/pragmatic-applications/Lib_Generic_Crud_Interface</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <SupportedPlatform Include="browser" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0-rc.1.21451.13" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0-rc.1.21451.13" />
+    </ItemGroup>
+
+</Project>
